@@ -61,7 +61,7 @@ public class ServiceImpl {
         boolQueryBuilder
                 .filter(QueryBuilders.termQuery("FlightDelay",false))
                 .filter(QueryBuilders.matchQuery("DestCityName", "Venice").boost(0.4f).fuzziness(Fuzziness.AUTO));
-//                .filter(QueryBuilders.rangeQuery("AvgTicketPrice").from(0).to(883));
+//                .filter(QueryBuilders.rangeQuery("AvgTicketPrice").from(0).to(500));
 
         SearchRequest searchRequest = new SearchRequest();
         searchRequest.indices("kibana_sample_data_flights");
